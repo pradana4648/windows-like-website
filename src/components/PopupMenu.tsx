@@ -140,8 +140,11 @@ const RenderBody: React.FC<string> = (value) => {
 
       commandSplit.map((data) => {
         if (data.includes("neofetch")) {
-          const data = "neofetch";
-          setHistory((prev) => [...prev, "C:\\Windows\\System32\\" + data]);
+          setHistory((prev) => [
+            ...prev,
+            "C:\\Windows\\System32\\" + data,
+            "Gak bisa bang kayak di Linux",
+          ]);
         }
       });
       setCommand("");
