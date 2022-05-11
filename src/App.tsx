@@ -2,7 +2,7 @@ import { Box, Button, Container, SimpleGrid, VStack } from "@chakra-ui/react";
 import React from "react";
 import wpBg from "./assets/wp.jpg";
 import CustomIcon from "./components/CustomIcon";
-import PopupMenu from "./components/PopopMenu";
+import PopupMenu from "./components/PopupMenu";
 import { icons } from "./data/icons";
 
 const App: React.FC = () => {
