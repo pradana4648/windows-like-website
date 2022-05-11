@@ -1,15 +1,13 @@
 import { Image, Text, VStack } from "@chakra-ui/react";
-import React, { useContext } from "react";
-import { ShowMenuContext } from "../App";
+import React from "react";
 
 interface CustomIconProps {
   name: string;
   icon: string;
+  onClose: () => void;
 }
 
-const CustomIcon: React.FC<CustomIconProps> = ({ icon, name }) => {
-  const { toggleClosed } = useContext(ShowMenuContext);
-
+const CustomIcon: React.FC<CustomIconProps> = ({ icon, name, onClose }) => {
   return (
     <VStack
       alignItems="flex-start"
@@ -20,7 +18,7 @@ const CustomIcon: React.FC<CustomIconProps> = ({ icon, name }) => {
         cursor: "default",
         bgColor: "lightblue",
       }}
-      onDoubleClick={() => toggleClosed?.(true)}
+      onDoubleClick={onClose}
     >
       <Image src={icon} alt="Icons" boxSize={14} alignSelf="center" />
       <Text textAlign="center">{name}</Text>
