@@ -136,7 +136,14 @@ const RenderBody: React.FC<string> = (value) => {
 
   const handleKey = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
-      setHistory((prev) => [...prev, "C:\\Windows\\System32\\" + command]);
+      const commandSplit = command.split(" ");
+
+      commandSplit.map((data) => {
+        if (data.includes("neofetch")) {
+          const data = "neofetch";
+          setHistory((prev) => [...prev, "C:\\Windows\\System32\\" + data]);
+        }
+      });
       setCommand("");
     }
   };
