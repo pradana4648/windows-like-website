@@ -7,6 +7,12 @@
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
+  "license": "MIT",
+  "author": {
+    "name": "Pradana",
+    "email": "wakwaujaim@gmail.com",
+    "url": "https://dan-tech.online"
+  },
   "dependencies": {
     "@chakra-ui/react": "^1.8.8",
     "@emotion/react": "^11.9.0",
